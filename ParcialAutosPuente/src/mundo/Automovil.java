@@ -33,8 +33,9 @@ public class Automovil extends Thread {
             
             int tiempoEspera = (int) (Math.random() * 10);
             if(tipo == 1){
-                System.out.println("Llega un carro en el lado izquierdo en " + tiempoEspera + " segundos" );
+                System.out.println("Llega un carro en el lado izquierdo, tiempo espera " + tiempoEspera + " segundos" );
                 try {
+                	
                     puente.colocarCarroIzq();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Automovil.class.getName()).log(Level.SEVERE, null, ex);
@@ -42,18 +43,20 @@ public class Automovil extends Thread {
             }
             
             else {
-                System.out.println("Llega un carro en el lado derecho en " + tiempoEspera + " segundos" );
+                System.out.println("Llega un carro en el lado derecho, tiempo espera " + tiempoEspera + " segundos" );
                 try {
+                	
                     puente.colocarCarroDer();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Automovil.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
             }
             
             try{
-                sleep(tiempoEspera*1000);
+            	sleep(tiempoEspera*1000);
             }catch(Exception e){
-                
+            	
             }
         }
     }

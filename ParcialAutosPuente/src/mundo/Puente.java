@@ -121,7 +121,7 @@ public class Puente {
         }
         else{
             if(cantidadCarrosIzq != 0){
-            System.out.println("pasan " + cantidadCarrosIzq + " carris del sentido izquierdo al derecho");
+            System.out.println("pasan " + cantidadCarrosIzq + " carros del sentido izquierdo al derecho");
             cantidadCarrosIzq = 0;
             }
         }
